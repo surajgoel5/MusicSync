@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Music Sync</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Music Sync</string>
+    <string name="nav_header_subtitle">Sync your music to lights</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_devices">Devices</string>
+    <string name="menu_debug">Debug</string>
+    <string name="update">Update</string>
+    <string name="full_spectrum_length">Full Spectrum Length</string>
+    <string name="viewable_spectrum_length">Visible Spectrum</string>
+    <string name="bass_idx">Bass Range</string>
+    <string name="mid_idx">Mid Range</string>
+    <string name="trebel_idx">Trebel Range</string>
+
+</resources>
