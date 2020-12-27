@@ -6,5 +6,7 @@
     <color name="redBar">#80FF0000</color>
     <color name="greenBar">#8000FF00</color>
     <color name="blueBar">#800000FF</color>
+    <color name="darkBg">#E2000000</color>
+    <color name="textColor">#FFFFFF</color>
 
 </resources>

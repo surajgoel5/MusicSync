@@ -42,12 +42,9 @@ public DebugData debugData;
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
-        //debugFragment= new DebugFragment();
 
         debugViewModel=   ViewModelProviders.of(this).get(DebugViewModel.class); //new DebugViewModel();
 
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
 
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home, R.id.nav_devices, R.id.nav_debug)
@@ -106,18 +103,20 @@ public DebugData debugData;
                             Visualizer visualizer,
                             byte[] bytes,
                             int samplingRate) {
-                        // mVisualizerView.updateVisualizer(bytes);
+                    //Dont need waveform rn
                     }
 
                     public void onFftDataCapture(
                             Visualizer visualizer,
                             byte[] bytes,
                             int samplingRate) {
-                        //mVisualizerView.updateVisualizer(bytes);\
                             if(debugModeOn) {
                                 debugViewModel.update(bytes);
                             }
-                        // Do nothing for now
+                            else{
+                             //Work on home fragment, stream to devices
+
+                            }
                     }
                 }, Visualizer.getMaxCaptureRate()-1 , false, true);
     }

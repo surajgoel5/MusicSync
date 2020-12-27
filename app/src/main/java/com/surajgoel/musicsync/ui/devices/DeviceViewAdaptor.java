@@ -1,7 +1,6 @@
 package com.surajgoel.musicsync.ui.devices;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuInflater;
@@ -14,7 +13,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.widget.PopupMenu;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.surajgoel.musicsync.MainActivity;
 import com.surajgoel.musicsync.R;
 import com.surajgoel.musicsync.appdata.Device;
 import com.surajgoel.musicsync.appdata.DeviceType;
@@ -38,7 +36,7 @@ public class DeviceViewAdaptor extends RecyclerView.Adapter<DeviceViewAdaptor.Vi
         LayoutInflater inflater = LayoutInflater.from(context);
 
         // Inflate the custom layout
-        View deviceView = inflater.inflate(R.layout.item_device, parent, false);
+        View deviceView = inflater.inflate(R.layout.item_devices_device, parent, false);
 
         // Return a new holder instance
         ViewHolder viewHolder = new ViewHolder(deviceView);

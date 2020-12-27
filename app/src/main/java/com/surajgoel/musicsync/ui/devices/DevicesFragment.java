@@ -6,12 +6,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
-//import android.support.annotation.NonNull;
-//import android.support.v4.app.Fragment;
-//import android.arch.lifecycle.ViewModelProviders;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -28,10 +24,6 @@ import com.surajgoel.musicsync.R;
 import com.surajgoel.musicsync.appdata.Device;
 import com.surajgoel.musicsync.appdata.DeviceDao;
 import com.surajgoel.musicsync.appdata.DeviceDatabase;
-import com.surajgoel.musicsync.appdata.DeviceType;
-
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.List;
 
 import static com.surajgoel.musicsync.appdata.DeviceType.Mono;
@@ -72,13 +64,8 @@ public class DevicesFragment extends Fragment {
 
             }
         });
-        /*Device dev= new Device();
-        dev.devid="rgb";
-        dev.devname="lolggg";
-        dev.ip="192.168.1.1";
-        dev.type=RGB;
-        deviceDao.insert(dev);
-*/
+
+
         return root;
 
          }

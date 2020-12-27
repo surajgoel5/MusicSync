@@ -25,14 +25,13 @@ public class Device {
     public  String devname;
 
     @ColumnInfo
-    public DeviceType type;
+    public DeviceType type=DeviceType.RGB;
 
     public boolean isAvailable(){
 
 
         try {
             URL url= new URL("http://"+ip+"/light/"+devid+"/");
-            Log.e("LOL",url.toString());
             HttpURLConnection client = (HttpURLConnection) url.openConnection();
             client.setRequestMethod("POST");
             client.getResponseCode();
@@ -41,9 +40,36 @@ public class Device {
             return true;
         }
         catch(Exception e){
-            Log.e("LOLOL",e+"");
             return false;
         }
+    }
+
+
+    public boolean setColor(int r, int g, int b,double transition){
+
+        int brightness= (int) (r+g+b)/3 ;
+        URL url=null;
+        try {
+            if(type==DeviceType.RGB) {
+                url = new URL("http://" + ip + "/light/" + devid + "/turn_on?transition=" + transition + "&brightness=" + brightness + "&b=" + b + "&g=" + g + "&r=" + r);
+            }
+            else{
+                url = new URL("http://" + ip + "/light/" + devid + "/turn_on?transition=" + transition + "&brightness=" + brightness);
+
+            }
+
+
+            HttpURLConnection client = (HttpURLConnection) url.openConnection();
+            client.setRequestMethod("POST");
+            client.getResponseCode();
+            if(client != null)
+                client.disconnect();
+            return true;
+        }
+        catch(Exception e){
+            return false;
+        }
+
     }
 
 }

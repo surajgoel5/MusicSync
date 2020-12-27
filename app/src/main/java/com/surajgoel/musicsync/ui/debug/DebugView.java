@@ -23,6 +23,7 @@ public class DebugView extends View {
     private Paint finalMixPaint = new Paint();
 
 
+
     public DebugView(Context context) {
         super(context);
         init();
@@ -98,6 +99,7 @@ public class DebugView extends View {
             }
             finalMixPaint.setColor(Color.argb(max, r, g, b));
             canvas.drawCircle((float) (getWidth() * 0.85), (float) (getHeight() * 0.2), getWidth() / 10, finalMixPaint);
+
 
 
         }
